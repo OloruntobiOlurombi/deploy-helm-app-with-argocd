@@ -7,12 +7,19 @@ We installed Argo CD for you and you can login in the UI tab.
 The UI starts empty because nothing is deployed on our cluster. Click the "NEW APP" button on the top left and fill the following details:
 
 application name : helm-gitops-example
+
 project: default
+
 sync policy: automatic
+
 repository URL: https://github.com/codefresh-contrib/gitops-certification-examples
+
 path: ./helm-app/
+
 Cluster: https://kubernetes.default.svc (this is the same cluster where ArgoCD is installed)
+
 Namespace: default
+
 Leave all the other values empty or with default selections. Note that in the case of Helm charts you can also override specific values at the bottom of the dialog. This is completely optional as our Helm chart already has the correct values.yaml file.
 
 Finally click the Create button. The application entry will appear in the main dashboard. Click on it.
